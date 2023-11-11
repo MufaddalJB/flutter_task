@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_task/screens/outstation_trip_screen.dart';
+import 'package:flutter_task/screens/outstation_one_way_trip_screen.dart';
 
 void main() {
   runApp(const MyApp());

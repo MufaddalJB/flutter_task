@@ -18,7 +18,7 @@ class TopRow extends StatelessWidget {
           height: 38.0,
           margin: const EdgeInsets.only(
             top: 78.0,
-            left: 125.0,
+            left: 70.0,
           ),
           child: Image.asset("images/bell_icon.png"),
         ),

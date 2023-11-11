@@ -18,7 +18,7 @@ class BottomNavigation extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: items.map((item) {
           return NavBarItem(
-            icon: item.icon,
+            imagepath: item.imagepath,
             text: item.text,
             textColor: item.textColor,
           );
@@ -29,19 +29,19 @@ class BottomNavigation extends StatelessWidget {
 }
 
 class BottomNavItem {
-  final IconData icon;
+  final String imagepath;
   final String text;
   final Color textColor;
 
-  BottomNavItem({required this.icon, required this.text, this.textColor = Colors.white});
+  BottomNavItem({required this.imagepath, required this.text, this.textColor = Colors.white});
 }
 
 class NavBarItem extends StatelessWidget {
-  final IconData icon;
+  final String imagepath;
   final String text;
   final Color textColor;
 
-  const NavBarItem({super.key, required this.icon, required this.text, this.textColor = Colors.white});
+  const NavBarItem({super.key, required this.imagepath, required this.text, this.textColor = Colors.white});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class NavBarItem extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(icon, color: textColor),
+          Image.asset(imagepath,width: 30.0,height: 35.0,),
           Text(text, style: TextStyle(color: textColor)),
         ],
       ),
