@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 class InfoContainer extends StatelessWidget {
   final String imagePath;
   final String title;
-  final String description;
+  final Text description;
 
   const InfoContainer({super.key, required this.imagePath, required this.title, required this.description});
 
@@ -16,7 +16,7 @@ class InfoContainer extends StatelessWidget {
         color:const Color.fromARGB(255, 208, 255, 211),
       ),
       margin: const EdgeInsets.only(
-        top: 10.0,
+        top: 10.0,left: 20,right: 20
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -30,7 +30,7 @@ class InfoContainer extends StatelessWidget {
             width: 31.0,
           ),
           const SizedBox(
-            width: 60.0,
+            width: 40.0,
           ),
            SizedBox(
             width: 150,
@@ -46,12 +46,12 @@ class InfoContainer extends StatelessWidget {
                     color: Colors.green,
                   ),
                 ),
-                Text(description),
+                (description),
               ],
             ),
           ),
           const SizedBox(
-            width: 50.0,
+            width: 10.0,
           ),
           const Icon(Icons.cancel)
         ],
